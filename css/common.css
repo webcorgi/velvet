@@ -1,0 +1,57 @@
+@charset "utf-8";
+
+a {text-decoration: none;}
+
+@font-face {
+    font-family: 'FlightSans';
+    font-style: normal;
+    font-weight: 400;
+    src: url(../fonts/FlightSans-Regular.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'FlightSans';
+    font-style: normal;
+    font-weight: 700;
+    src: url(../fonts/FlightSans-Bold.woff2) format('woff2');
+}
+@font-face {
+    font-family: 'FlightSans';
+    font-style: normal;
+    font-weight: 900;
+    src: url(../fonts/FlightSans-Title.woff2) format('woff2');
+}
+body * {
+    font-family: 'FlightSans', sans-serif;
+    font-weight: 400;
+    font-size:16px;
+    line-height: 1.4;
+	color: #000;
+}
+label,a,button,img,input,select {
+	transition-duration: .2s;
+}
+button {
+	background: none;
+}
+
+/* 여백 */
+.h5 {height:5px; padding:0; margin:0; clear:both;}
+.h10 {height:10px; padding:0; margin:0; clear:both;}
+.h20 {height:20px; padding:0; margin:0; clear:both;}
+.h30 {height:30px; padding:0; margin:0; clear:both;}
+.h40 {height:40px; padding:0; margin:0; clear:both;}
+.h50 {height:50px; padding:0; margin:0; clear:both;}
+.h60 {height:60px; padding:0; margin:0; clear:both;}
+.h70 {height:70px; padding:0; margin:0; clear:both;}
+.h80 {height:80px; padding:0; margin:0; clear:both;}
+.h90 {height:90px; padding:0; margin:0; clear:both;}
+.h100 {height:100px; padding:0; margin:0; clear:both;}
+
+select {
+    -webkit-appearance:none; /* 크롬 화살표 없애기 */
+    -moz-appearance:none; /* 파이어폭스 화살표 없애기 */
+    appearance:none /* 화살표 없애기 */
+}
+body {
+	/* overflow-x: hidden; */
+}

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>RAND</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+        <script src="../js/jquery-2.2.4.min.js"></script>
+        <script src="../js/script.js"></script>
+
+        <!-- swiper slide -->
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+        <script src="../js/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="header__left">
+                <button class="btn-menu"><img src="../img/common/burger.png" alt="bugermenu"></button>
+                <h1>
+                    <a href="./index.html" class="header-logo">
+                        <img src="../img/common/logo.png" alt="logo">
+                    </a>
+                </h1>
+            </div>
+            <aside class="header__right__aside">
+                <div class="aside__profile">
+                    <img src="../img/common/profile_sample.jpg" alt=""  class="img-sample">
+                    <span class="num">2</span>
+                </div>
+                <div class="aside__userinfo">
+                    <div class="aside__userinfo-text">
+                        <p class="user-name">User123</p>
+                        <p class="user-cash">Balance: 50,000,000</p>
+                    </div>
+                    <div class="aside__wallet">
+                        <img src="../img/common/img_wallet.png" alt="wallet">
+                    </div>
+                    <button class="btn-polygondown">
+                        <img src="../img/common/polygon_down.png" alt="down" class="img-polygondown">
+                    </button>
+                </div>
+
+                <div class="sideProfile__outer">
+                    <div class="sideProfile">
+                        <ul class="list">
+                            <li>
+                                <span>Comp</span>
+                                <span>50,000<b class="c_purple">P</b></span>
+                            </li>
+                            <li>
+                                <span>Coupon</span>
+                                <span><b class="c_purple">( 1 )</b></span>
+                            </li>
+                            <li>
+                                <span>Lucky Spin</span>
+                                <span><b class="c_purple">( 2 )</b></span>
+                            </li>
+                            <li>
+                                <span>Messages</span>
+                                <span><b class="c_purple">( 3 )</b></span>
+                            </li>
+                        </ul>
+                        <a href="./mypage_account.html" class="btn-common">MY PAGE</a>
+                    </div>
+                </div>
+            </aside>
+        </header>
+
+
+        <!-- mobile nav -->
+        <div class="mobileNav">
+            <a href="javascript:;" class="btn-menu">
+                <i></i>
+                <span>Menu</span>
+            </a>
+            <a href="javascript:;" class="btn-search">
+                <i></i>
+                <span>Search</span>
+            </a>
+            <a href="javascript:;" class="btn-casino">
+                <i></i>
+                <span>Casino</span>
+            </a>
+            <a href="javascript:;" class="btn-sports">
+                <i></i>
+                <span>Sports</span>
+            </a>
+            <a href="javascript:;" class="btn-chat">
+                <i></i>
+                <span>Chat</span>
+            </a>
+        </div>
+        <!-- // mobile nav -->
+
+        
+        <div class="popup wallet withdraw" style="display:none">
+            <div class="cont">
+                <div class="firstTab">
+                    <button onclick="changeWalletType('deposit')">DEPOSIT</button>
+                    <button onclick="changeWalletType('withdrawal')">WITHDRAWAL</button>
+                </div>
+                <div class="popup__divider">
+                    <div><!--  -->
+                        <div class="top">
+                            <h2>DEPOSIT REQUEST</h2>
+                            <button class="btn-close">
+                                <img src="../img/common/close.png" alt="close">
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button class="active">10,000</button>
+                            <button>50,000</button>
+                            <button>100,000</button>
+                            <button>500,000</button>
+                            <button>1,000,000</button>
+                        </div>
+                        <div class="walletform">
+                            <label>
+                                <span>Deposit Request Amount</span>
+                                <input type="text">
+                            </label>
+                            <div class="box">
+                                <label>
+                                    <span>Name</span>
+                                    <input type="text">
+                                </label>
+                                <label>
+                                    <span>Phone Number</span>
+                                    <input type="text">
+                                </label>
+                            </div>
+                            <label>
+                                <span>Select the game you want to use</span>
+                                <select name="" id="">
+                                    <option value="">Automatic payment of first/additional charges when selecting a game</option>
+                                    <option value="">Sports / Casino / Slots / Minigames</option>
+                                    <option value="">Hold'em</option>
+                                </select>
+                            </label>
+                            <ul class="popup__btminfo">
+                                <li>※ After selecting a game to use, you cannot use it for any other game.</li>
+                                <li>※ If you exchange on the same day, the recharge bonus will not be paid.</li>
+                                <li>※ Please check the notice for rolling for all games.</li>
+                            </ul>
+                            <button class="btn-common">deposit</button>
+                        </div>
+                    </div><!-- // -->
+                    <div>
+                        <div class="top">
+                            <h2>WITHDRAWAL REQUEST</h2>
+                            <button class="btn-close">
+                                <img src="../img/common/close.png" alt="close">
+                            </button>
+                        </div>
+                        <div class="tab">
+                            <button class="active">10,000</button>
+                            <button>50,000</button>
+                            <button>100,000</button>
+                            <button>500,000</button>
+                            <button>1,000,000</button>
+                        </div>
+                        <div class="walletform">
+                            <label>
+                                <span>Withdrawal Request Amount</span>
+                                <input type="text">
+                            </label>
+                            <div class="walletform__inner">
+                                <div class="box">
+                                    <label>
+                                        <span>Phone Number</span>
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        <span>Bank name</span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                                <div class="box">
+                                    <label>
+                                        <span>Name</span>
+                                        <input type="text">
+                                    </label>
+                                    <label>
+                                        <span>Account Number</span>
+                                        <input type="text">
+                                    </label>
+                                </div>
+                            </div>
+                            <button class="btn-common">withdraw</button>
+                        </div>
+                    </div><!-- // -->
+                </div>
+            </div>
+            <div class="bg"></div>
+        </div><!-- // wallet -->
+
+
+        
+        <nav>
+            <a href="./wheel.html" class="btn-nav-wheel">
+                <img src="../img/sidebar/wheel.svg" alt="wheel">
+                <b>WONDER WHEEL</b>
+            </a>
+            <div class="linkbox">
+                <a href="javascript:;" class="btn-deposit">
+                    <img src="../img/sidebar/deposit.svg" alt="deposit">
+                    <span>Deposit<br>request</span>
+                </a>
+                <a href="javascript:;" class="btn-withdrawal">
+                    <img src="../img/sidebar/withdraw.svg" alt="withdraw">
+                    <span>withdrawal<br>request</span>
+                </a>
+                <a href="./events.html">
+                    <img src="../img/sidebar/events.svg" alt="events">
+                    <span>events</span>
+                </a>
+                <a href="./announcement.html">
+                    <img src="../img/sidebar/announcement.svg" alt="announcement">
+                    <span class="othersize">announcement</span>
+                </a>
+            </div>
+            <div class="gamescategory">
+                <button class="title-sidebar btn-category">
+                    <img src="../img/sidebar/games.svg" alt="games">
+                    <b>games category</b>
+                    <img src="../img/common/Polygon_down_white.png" alt="arrow" class="arrow">
+                </button>
+                <div class="list">
+                    <a href="javascript:;" class="">
+                        <img src="../img/sidebar/games_holdem.png" alt="holdem">
+                        <span>hold'em</span>
+                    </a>
+                    <a href="javascript:;" class="">
+                        <img src="../img/sidebar/games_livecasino.png" alt="livecasino">
+                        <span>Live casino</span>
+                    </a>
+                    <a href="javascript:;" class="">
+                        <img src="../img/sidebar/games_slots.png" alt="slots">
+                        <span>slots</span>
+                    </a>
+                    <a href="javascript:;" class="">
+                        <img src="../img/sidebar/games_sports.png" alt="sports">
+                        <span>sports</span>
+                    </a>
+                    <a href="javascript:;" class="">
+                        <img src="../img/sidebar/games.svg" alt="minigames">
+                        <span>mini games</span>
+                    </a>
+                </div>
+                <a href="javascript:;" class="title-sidebar">
+                    <img src="../img/sidebar/ico_livechat.png" alt="livechat">
+                    <b>live chat</b>
+                </a>
+                <div class="select__fake">
+                    <button class="selected">
+                        <img src="../img/sidebar/ko.png" alt="contry" class="select__fake-icon">
+                        <span class="select__fake-name">Korean</span>
+                    </button>
+                    <div class="options">
+                        <button class="option">
+                            <img src="../img/sidebar/ko.png" alt="contry" class="select__fake-icon">
+                            <span class="select__fake-name">Korean</span>
+                        </button>
+                        <button class="option">
+                            <img src="../img/sidebar/en.png" alt="contry" class="select__fake-icon">
+                            <span class="select__fake-name">English</span>
+                        </button>
+                    </div>
+                </div>
+
+                <a href="javascript:;" class="sidebar__banner banner1">
+                    <h3>Sudden coupon payment every week</h3>
+                    <h4>Rolling 300%</h4>
+                    <p>
+                        10x limit<br>
+                        when using coupon only
+                    </p>
+                </a>
+                <a href="javascript:;" class="sidebar__banner banner2">
+                    <h3>Losing coupon 5-10% paid</h3>
+                    <div class="h30"></div>
+                    <p>
+                        Contact person in charge
+                    </p>
+                </a>
+            </div>
+        </nav>
+        <div class="contents_container">
+
+            <!-- contents -->
+            <div class="contents mypage">
+                <h2 class="title-common2">my page</h2>
+                <div class="tab__mypage">
+                    <a href="./mypage_account.html">Account</a>
+                    <a href="./mypage_dp.html">Deposit/Withdrawal</a>
+                    <a href="./mypage_notes.html">Notes</a>
+                    <a href="./mypage_coupons.html">Coupons</a>
+                    <a href="./mypage_comp.html">Comp</a>
+                    <a class="active" href="./mypage_details_domestic.html">Betting Details</a>
+                </div>
+
+                <div class="mypage__cont bettingDetails">
+
+                  <div class="mypage__table">
+                    <div class="details__tab__outer">
+                    <h3 class="title-mypage">Betting Details</h3>
+                      <div class="details__tab">
+                        <a href="./mypage_details_domestic.html" class="btn-common active">Domestic Type</a>
+                        <a href="javascript:;" class="btn-common">Overseas Type</a>
+                        <a href="javascript:;" class="btn-common">In-play</a>
+                        <a href="javascript:;" class="btn-common">Real-time</a>
+                        <a href="javascript:;" class="btn-common">Special</a>
+                        <a href="./mypage_details_minigame.html" class="btn-common">Mini Game</a>
+                        <a href="./mypage_details_virtualgame.html" class="btn-common">Virtual Game</a>
+                        <a href="javascript:;" class="btn-common">Touch Game</a>
+                        <a href="./mypage_details_lotusgame.html" class="btn-common">Lotus Game</a>
+                        <a href="javascript:;" class="btn-common">MGM Games</a>
+                      </div>
+                    </div>
+                    <div class="details__tab">
+                      <a href="javascript:;" class="btn-common active">Delete History</a>
+                      <a href="javascript:;" class="btn-common active">Select Inquiry</a>
+                      <a href="javascript:;" class="btn-common active">Writing</a>
+                    </div>
+
+                    <div class="BettingTable">
+                      <table>
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                            <col style="width: 15%;">
+                            <col style="width: 5%;">
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 10%;">
+                        </colgroup>
+                        <tr>
+                            <th>Date</th>
+                            <th>League</th>
+                            <th>Home</th>
+                            <th>VS</th>
+                            <th>Away</th>
+                            <th>Type</th>
+                            <th>Result</th>
+                            <th>Period Score</th>
+                            <th>Game Score</th>
+                            <th>Payout</th>
+                            <th>Status</th>
+                        </tr>
+                        <tr>
+                          <td>2024-10-31 (Wed) 8:05</td>
+                          <td>
+                            <img src="../img/mypage/ico_baseball.svg" alt="baseball">
+                            <img src="../img/mypage/ico_us.svg" alt="US">
+                            <span>MLB</span>
+                          </td>
+                          <td class="home win">
+                            <p>Cleveland <span class="c_gold">[1.38]</span></p>
+                          </td>
+                          <td>VS</td>
+                          <td class="away">
+                            <p>Chicago <span class="c_gold">[2.32]</span></p>
+                          </td>
+                          <td>
+                            Win/Loss<br>
+                            (including overtime)
+                          </td>
+                          <td>Home Win</td>
+                          <td>8 : 4</td>
+                          <td>8 : 4</td>
+                          <td>1.38x</td>
+                          <td>
+                            <span class="c_green">Win</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2024-10-31 (Wed) 8:05</td>
+                          <td>
+                            <img src="../img/mypage/ico_baseball.svg" alt="baseball">
+                            <img src="../img/mypage/ico_us.svg" alt="US">
+                            <span>MLB</span>
+                          </td>
+                          <td class="home ">
+                            <p>Cleveland <span class="c_gold">[1.38]</span></p>
+                          </td>
+                          <td>VS</td>
+                          <td class="away win">
+                            <p>Chicago <span class="c_gold">[2.32]</span></p>
+                          </td>
+                          <td>
+                            Win/Loss<br>
+                            (including overtime)
+                          </td>
+                          <td>Home Win</td>
+                          <td>8 : 4</td>
+                          <td>8 : 4</td>
+                          <td>1.38x</td>
+                          <td>
+                            <span class="c_green">Win</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2024-10-31 (Wed) 8:05</td>
+                          <td>
+                            <img src="../img/mypage/ico_baseball.svg" alt="baseball">
+                            <img src="../img/mypage/ico_us.svg" alt="US">
+                            <span>MLB</span>
+                          </td>
+                          <td class="home win">
+                            <p>Cleveland <span class="c_gold">[1.38]</span></p>
+                          </td>
+                          <td>VS</td>
+                          <td class="away">
+                            <p>Chicago <span class="c_gold">[2.32]</span></p>
+                          </td>
+                          <td>
+                            Win/Loss<br>
+                            (including overtime)
+                          </td>
+                          <td>Home Win</td>
+                          <td>8 : 4</td>
+                          <td>8 : 4</td>
+                          <td>1.38x</td>
+                          <td>
+                            <span class="c_green">Win</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="11" class="tr-result">
+                            <input type="checkbox">
+                            <span>Betting acceptance time: 2024-07-04 21:59:00</span>
+                            <span>Expected winning amount: (Bet 15,000 x Odds 3.48) = 52,200</span>
+                            <span>Result prize amount: 52,200 Won</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="h10"></div>
+                    <div class="details__tab">
+                      <a href="javascript:;" class="btn-common active">Delete History</a>
+                      <a href="javascript:;" class="btn-common active">Contact Us</a>
+                      <a href="javascript:;" class="btn-common active">Writing</a>
+                    </div>
+
+                    <div class="BettingTable">
+                      <table>
+                        <colgroup>
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                            <col style="width: 15%;">
+                            <col style="width: 5%;">
+                            <col style="width: 15%;">
+                            <col style="width: 10%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 5%;">
+                            <col style="width: 10%;">
+                        </colgroup>
+                        <tr>
+                          <th>Date</th>
+                          <th>League</th>
+                          <th>Home</th>
+                          <th>VS</th>
+                          <th>Away</th>
+                          <th>Type</th>
+                          <th>Result</th>
+                          <th>Period Score</th>
+                          <th>Game Score</th>
+                          <th>Payout</th>
+                          <th>Status</th>
+                        </tr>
+                        <tr>
+                          <td>2024-10-31 (Wed) 8:05</td>
+                          <td>
+                            <img src="../img/mypage/ico_soccer.svg" alt="soccer">
+                            <img src="../img/mypage/ico_netherlands.svg" alt="US">
+                            <span>Netherlands 
+                                D2</span>
+                          </td>
+                          <td class="home win">
+                            <p>Cleveland <span class="c_gold">[1.38]</span></p>
+                          </td>
+                          <td>VS</td>
+                          <td class="away">
+                            <p>Chicago <span class="c_gold">[2.32]</span></p>
+                          </td>
+                          <td>
+                            Win/Loss<br>
+                            (including overtime)
+                          </td>
+                          <td>Home Win</td>
+                          <td>8 : 4</td>
+                          <td>8 : 4</td>
+                          <td>1.38x</td>
+                          <td>
+                            <span>Pending</span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td colspan="11" class="tr-result">
+                            <input type="checkbox">
+                            <span>Betting acceptance time: 2024-07-04 21:59:00</span>
+                            <span>Expected winning amount: (Bet 15,000 x Odds 3.48) = 52,200</span>
+                            <span>Result prize amount: 52,200 Won</span>
+                          </td>
+                        </tr>
+                      </table>
+                    </div>
+                    <div class="h10"></div>
+                    <div class="details__tab">
+                      <a href="javascript:;" class="btn-common active">Delete History</a>
+                      <a href="javascript:;" class="btn-common active">Contact Us</a>
+                      <a href="javascript:;" class="btn-common active">Writing</a>
+                    </div>
+
+                    <div class="paging">
+                        <a href="javascript:;" class="first"></a>
+                        <a href="javascript:;" class="prev"></a>
+                        <div class="num">
+                            <a href="javascript:;" class="active">1</a>
+                            <a href="javascript:;">2</a>
+                            <a href="javascript:;">3</a>
+                            <a href="javascript:;">4</a>
+                            <a href="javascript:;">5</a>
+                            <a href="javascript:;">6</a>
+                            <a href="javascript:;">7</a>
+                            <a href="javascript:;">8</a>
+                            <a href="javascript:;">9</a>
+                            <a href="javascript:;">10</a>
+                        </div>
+                        <a href="javascript:;" class="next"></a>
+                        <a href="javascript:;" class="last"></a>
+                    </div>
+                    <style>
+                        @media screen and (max-width:767px){
+                            .paging .num a:nth-child(n+6) {
+                                display: none;
+                            }
+                        }
+                    </style>
+                </div>
+                </div>
+            </div>
+            <footer>
+                <div class="footer__inner">
+                    <p class="info__copy">© Casbit Group N.V., 2021</p>
+                    <p class="info__addr">Grand and related rights belong to Casbit Group N.V. incorporated in Curacao, Zuikertuintjeweg Z/N (Zuikertuin Tower), by the digital reg. number 157923. Retrust OU with reg.number 16310234 and address Harju maakond. Tallin, Kesklinna linnoasa is a payment agent.</p>
+                    <div class="footer__etcinfo">
+                        <div class="top">
+                            <div class="agemark">18+</div>
+                            <p class="text">
+                                Gambling can be addictive.<br>
+                                Play responsibly<br>
+                                At Grand, we aim for healthy play.
+                            </p>
+                        </div>
+                        <div class="btm">
+                            <a href="javascript:;" class="btn-link1">
+                                <img src="../img/common/gambleaware.png" alt="gambleaware">
+                            </a>
+                            <a href="javascript:;" class="btn-link2">
+                                <img src="../img/common/curacao.png" alt="curacao">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>
