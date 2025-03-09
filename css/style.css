@@ -3400,7 +3400,7 @@ select {
         display:block;
     }
     .main__banners .nowjoin {
-        bottom:10px;
+        bottom:30px;
     }
     .main__company{
         flex-wrap: wrap;
@@ -3868,5 +3868,9 @@ select {
     .nav-login-btn,
     .nav-signup-btn{
         font-size:12px;
+    }
+
+    .loader img {
+        max-width:100%;
     }
 }
