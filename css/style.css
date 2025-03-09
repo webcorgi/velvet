@@ -4,6 +4,65 @@ html {
     overflow-x: hidden;
 }
 
+.loader__wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.loader {
+    position: relative;
+    display: inline-block;
+}
+
+/* 원본 이미지 표시 */
+.loader img {
+    display: block;
+    position: relative;
+    z-index: 1;
+}
+
+/* 빛 효과를 위한 복제 이미지 요소 */
+.shine {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+    background-image: url('../img/common/logo.png'); /* 동일한 이미지 사용 */
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    animation: shine-effect 2s infinite;
+}
+
+@keyframes shine-effect {
+    0%, 100% {
+        opacity: 0;
+        filter: brightness(1.5);
+    }
+    50% {
+        opacity: 1;
+        filter: brightness(2.5);
+    }
+}
+
+.loader__wrap {
+    /* 기존 스타일 유지 */
+    transition: opacity 0.5s ease-out;
+}
+
+.loader__wrap.fade-out {
+    opacity: 0;
+}
 
 :root {
     --main-gradient:linear-gradient(180deg, #DE2A1E 0%, #B70B00 100%);

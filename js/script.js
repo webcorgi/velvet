@@ -1,4 +1,6 @@
 $(function () {
+    // 함수 실행
+    handleLoader();
     mainVisualSlider()
     mainGamesSlider()
     clickNav()
@@ -6,7 +8,6 @@ $(function () {
     clickTableTr()
     circleProgressbar()
     wheelAction()
-    activeTabWallet();
     activeBtnCategory()
     activePopupMember()
 })
@@ -198,15 +199,6 @@ function activeBtnCategory() {
         $(this).toggleClass('active');
     });
 }
-
-function activeTabWallet() {
-    $('.popup.wallet').each(function(){
-        $(this).find('.tab button').on('click', function() {
-            $(this).addClass('active').siblings().removeClass('active');
-        })
-    });
-}
-
 
 function activePopupMember(){
     $('.btn-member.signup').on('click', function(){
@@ -406,3 +398,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // 팝업 매니저 초기화
     popupManager.init();
 });
+
+// 로딩 화면을 제어하는 함수
+function handleLoader() {
+    // 로딩 요소를 찾습니다
+    const loaderWrap = document.querySelector('.loader__wrap');
+    
+    // 3초(3000ms) 후에 로딩 화면을 사라지게 합니다
+    setTimeout(function() {
+        // 페이드 아웃 효과를 위한 클래스 추가
+        loaderWrap.classList.add('fade-out');
+        
+        // 페이드 아웃 애니메이션 시간(0.5초) 후 완전히 제거
+        setTimeout(function() {
+            loaderWrap.style.display = 'none';
+        }, 500);
+    }, 5000);
+}
