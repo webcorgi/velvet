@@ -1,0 +1,307 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>VELVET</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+        <script src="../js/jquery-2.2.4.min.js"></script>
+        <script src="../js/script.js"></script>
+
+        <!-- swiper slide -->
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+        <script src="../js/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+        
+        <!-- Navigation Links -->
+        <nav class="nav-container">
+            <!-- Navigation Header with Logo -->
+            <div class="nav-header">
+                <img src="../img/common/logo.png" alt="Velvet Casino & Sports" class="nav-logo">
+                <button class="nav-close-btn">
+                    <img src="../img/common/nav-close.png" alt="close">
+                </button>
+            </div>
+            
+            <!-- Navigation Links -->
+            <div class="nav-links">
+                <a href="../pages/home.html" class="nav-item">
+                    <img src="../img/common/icon-home.png" alt="" class="nav-icon">
+                    <span class="nav-text">홈</span>
+                </a>
+                <a href="../pages/live-casino.html" class="nav-item">
+                    <img src="../img/common/icon-livecasino.png" alt="" class="nav-icon">
+                    <span class="nav-text">라이브카지노</span>
+                </a>
+                <a href="../pages/slots.html" class="nav-item">
+                    <img src="../img/common/icon-slot.png" alt="" class="nav-icon">
+                    <span class="nav-text">슬롯</span>
+                </a>
+                <a href="../pages/sports.html" class="nav-item">
+                    <img src="../img/common/icon-sports.png" alt="" class="nav-icon">
+                    <span class="nav-text">스포츠</span>
+                </a>
+                <a href="../pages/holdem.html" class="nav-item">
+                    <img src="../img/common/icon-holdem.png" alt="" class="nav-icon">
+                    <span class="nav-text">홀덤</span>
+                </a>
+                <a href="../pages/minigame.html" class="nav-item">
+                    <img src="../img/common/icon-minigame.png" alt="" class="nav-icon">
+                    <span class="nav-text">미니게임</span>
+                </a>
+                <div class="nav-divider"></div>
+                <a href="../pages/deposit.html" class="nav-item">
+                    <img src="../img/common/icon-deposit.png" alt="" class="nav-icon">
+                    <span class="nav-text">입금</span>
+                </a>
+                <a href="../pages/withdraw.html" class="nav-item">
+                    <img src="../img/common/icon-withdraw.png" alt="" class="nav-icon">
+                    <span class="nav-text">출금</span>
+                </a>
+                <a href="../pages/rolling.html" class="nav-item">
+                    <img src="../img/common/icon-wallet.png" alt="" class="nav-icon">
+                    <span class="nav-text">룰렛</span>
+                </a>
+                <a href="../pages/attendance.html" class="nav-item">
+                    <img src="../img/common/icon-check.png" alt="" class="nav-icon">
+                    <span class="nav-text">출석체크</span>
+                </a>
+                <a href="../pages/mypage.html" class="nav-item nav-active">
+                    <img src="../img/common/icon-mypage.png" alt="" class="nav-icon">
+                    <span class="nav-text">마이페이지</span>
+                </a>
+                <a href="../pages/betting-history.html" class="nav-item">
+                    <img src="../img/common/icon-betting.png" alt="" class="nav-icon">
+                    <span class="nav-text">베팅내역</span>
+                </a>
+                <a href="../pages/events.html" class="nav-item">
+                    <img src="../img/common/icon-event.png" alt="" class="nav-icon">
+                    <span class="nav-text">이벤트</span>
+                </a>
+                <a href="../pages/notice.html" class="nav-item">
+                    <img src="../img/common/icon-notice.png" alt="" class="nav-icon">
+                    <span class="nav-text">공지사항</span>
+                </a>
+                <div class="nav-divider"></div>
+                <a href="../pages/live-chat.html" class="nav-item nav-chat">
+                    <img src="../img/common/icon-chat.png" alt="" class="nav-icon">
+                    <span class="nav-text">라이브 채팅</span>
+                </a>
+                <!-- Login/Signup Buttons -->
+                <div class="nav-buttons">
+                    <button class="nav-signup-btn">회원가입</button>
+                    <button class="nav-login-btn">로그인</button>
+                </div>
+            </div>
+        </nav>
+
+        <header>
+            <div class="header__left">
+                <button class="btn-menu"><img src="../img/common/burger.png" alt="bugermenu"></button>
+                <a href="./live-casino.html">라이브카지노</a>
+                <a href="./slots.html">슬롯</a>
+                <a href="./sports.html">스포츠</a>
+                <a href="./holdem.html">홀덤</a>
+                <a href="./minigame.html">미니게임</a>
+            </div>
+            <a href="./index.html" class="header-logo">
+                <img src="../img/common/logo.png" alt="logo">
+            </a>
+            <aside class="header__right">
+                <div class="header__Loggedin">
+                    <!-- Notification Bell with Counter -->
+                    <div class="notification-wrapper">
+                        <img src="../img/common/notification-bell.png" alt="알림" class="notification-icon">
+                        <div class="notification-badge">1</div>
+                    </div>
+                    
+                    <!-- Balance Display -->
+                    <div class="balance-display">
+                        <span class="balance-amount">100,000</span>
+                        <span class="balance-currency">원</span>
+                    </div>
+                    
+                    <!-- Deposit Button -->
+                    <button class="deposit-button">보증금</button>
+                    
+                    <!-- Profile Icon -->
+                    <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                </div>
+            </aside>
+        </header>
+
+        <div class="contents_container">
+
+            <div class="contents">
+                <h2 class="sub__title">
+                    <span>마이페이지</span>
+                </h2>
+                <div class="tab__mypage">
+                    <button onclick="location.href='./mypage__bonus.html'">보너스적립현황</button>
+                    <button onclick="location.href='./mypage__betting.html'">베팅내역</button>
+                    <button onclick="location.href='./mypage__messages.html'">쪽지함</button>
+                    <button class="active" onclick="location.href='./mypage__friends.html'">친구목록</button>
+                    <button onclick="location.href='./mypage__coupons.html'">쿠폰목록</button>
+                    <button onclick="location.href='./mypage__transactions.html'">입출금내역</button>
+                    <button onclick="location.href='./mypage__password.html'">비밀번호변경</button>
+                </div>
+
+                <div class="mypage__table__area">
+                    <h3 class="mypage__title">친구목록</h3>
+                    <div class="mypage__table">
+                        <table>
+                            <tr>
+                                <th>번호</th>
+                                <th>아이디</th>
+                                <th>가입일</th>
+                            </tr>
+                            <tr>
+                                <td colspan="3" class="no-data">
+                                    <p class="text-none">데이터가 존재하지 않습니다.</p>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer>
+                <div class="footer-container">
+                    <div class="footer-container-top">
+                        <!-- Language selector -->
+                        <div class="language-selector">
+                            <select>
+                                <option>English</option>
+                                <option selected>한국어</option>
+                            </select>
+                        </div>
+                        
+                        <!-- Payment methods section -->
+                        <div class="payment-section">
+                            <div>
+                                <h2 class="payment-title">Payment Methods:</h2>
+                                <div class="crypto-icons">
+                                    <img class="crypto-icon" src="../img/main/payment1.png" alt="Bitcoin">
+                                    <img class="crypto-icon" src="../img/main/payment2.png" alt="Ethereum">
+                                    <img class="crypto-icon" src="../img/main/payment3.png" alt="Tether">
+                                    <img class="crypto-icon" src="../img/main/payment4.png" alt="Binance">
+                                    <img class="crypto-icon" src="../img/main/payment5.png" alt="Cardano">
+                                    <img class="crypto-icon" src="../img/main/payment6.png" alt="Bitcoin Cash">
+                                    <img class="crypto-icon" src="../img/main/payment7.png" alt="Tron">
+                                    <img class="crypto-icon" src="../img/main/payment8.png" alt="XRP">
+                                    <img class="crypto-icon" src="../img/main/payment9.png" alt="Litecoin">
+                                    <img class="crypto-icon" src="../img/main/payment10.png" alt="Dogecoin">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h2 class="payment-title">Buy crypto using:</h2>
+                                <div class="payment-icons">
+                                    <img class="payment-icon" src="../img/main/visa.png" alt="Visa">
+                                    <img class="payment-icon" src="../img/main/apay.png" alt="Apple Pay">
+                                    <img class="payment-icon" src="../img/main/master.png" alt="Mastercard">
+                                    <img class="payment-icon" src="../img/main/gpay.png" alt="Google Pay">
+                                    <img class="payment-icon" src="../img/main/revolut.png" alt="Revolut">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Divider line -->
+                    <div class="divider"></div>
+                    
+                    <!-- Footer navigation -->
+                    <div class="footer-nav">
+                        <!-- Column 1 -->
+                        <div class="footer-column">
+                            <h3>카지노</h3>
+                            <ul>
+                                <li><a href="#">라이브 카지노</a></li>
+                                <li><a href="#">스포츠베팅</a></li>
+                                <li><a href="#">슬롯</a></li>
+                                <li><a href="#">크러쉬 게임</a></li>
+                                <li><a href="#">라이브 바카라</a></li>
+                                <li><a href="#">블랙잭</a></li>
+                                <li><a href="#">라이브 룰렛</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Column 2 -->
+                        <div class="footer-column">
+                            <h3>프로모션</h3>
+                            <ul>
+                                <li><a href="#">프로모션</a></li>
+                                <li><a href="#">VIP 라운지</a></li>
+                                <li><a href="#">클럽</a></li>
+                                <li><a href="#">상점</a></li>
+                                <li><a href="#">제휴 프로그램</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Column 3 -->
+                        <div class="footer-column">
+                            <h3>지원</h3>
+                            <ul>
+                                <li><a href="#">도움말 센터</a></li>
+                                <li><a href="#">라이브 지원</a></li>
+                                <li><a href="#">책임감 있는 게임</a></li>
+                                <li><a href="#">입금방법</a></li>
+                                <li><a href="#">출금방법</a></li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Column 4 -->
+                        <div class="footer-column">
+                            <h3>합법적인</h3>
+                            <ul>
+                                <li><a href="#">이용약관</a></li>
+                                <li><a href="#">보너스 T&C</a></li>
+                                <li><a href="#">스포츠베팅 T&C</a></li>
+                                <li><a href="#">개인정보 보호 정책</a></li>
+                                <li><a href="#">AML 정책</a></li>
+                                <li><a href="#">KYC 정책</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <!-- Divider line -->
+                    <div class="divider"></div>
+                    
+                    <!-- Footer bottom section -->
+                    <div class="footer-bottom">
+                        <!-- Certification logos -->
+                        <div class="certification">
+                            <img class="cert-logo" src="../img/main/gcb.png" alt="GCB Certification">
+                            <img class="age-restriction" src="../img/main/mark_18.png" alt="18+ Only">
+                        </div>
+                        
+                        <!-- Footer description -->
+                        <div class="footer-description">
+                            <p>벳벳카지노에서는 여러 온라인 카지노게임 에볼루션, 벳컨스트럭트, 플레이텍 라이브, 아시안게임 등 여러 플랫폼을 제공하고있습니다.</p>
+                            <p>다양한 게임을 즐길수 최고의 서비스로 보답하겠습니다.</p>
+                        </div>
+                        
+                        <!-- Social media section -->
+                        <div class="social-section">
+                            <h3 class="social-title">Join our community:</h3>
+                            <div class="social-icons">
+                                <img class="social-icon" src="../img/main/x.png" alt="Twitter">
+                                <img class="social-icon" src="../img/main/tele.png" alt="Telegram">
+                                <img class="social-icon" src="../img/main/insta.png" alt="Instagram">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+        </div>
+
+    </body>
+</html>

@@ -1,51 +1,15 @@
 $(function () {
     mainVisualSlider()
     mainGamesSlider()
-    mainLivecasinoSlider()
-    mainLiveSlotsSlider()
     clickNav()
-    clickUserinfo()
     activePopup()
     clickTableTr()
     circleProgressbar()
     wheelAction()
-    selectFaker()
     activeTabWallet();
     activeBtnCategory()
     activePopupMember()
-    mainMsgMore()
-    visualAnimation1()
-    wheelanimation()
 })
-
-function visualAnimation1(){
-    const leftElements = document.querySelectorAll('.swiper-slide-item.visual1 .left');
-
-    leftElements.forEach(element => {
-        // 조명 컨테이너
-        const container = document.createElement('div');
-        container.className = 'light-container';
-
-        // 6개의 원형 조명
-        for (let i = 0; i < 6; i++) {
-            const light = document.createElement('div');
-            light.className = 'circle-light';
-            container.appendChild(light);
-        }
-
-        // 기본 오버레이
-        const overlay = document.createElement('div');
-        overlay.className = 'light-overlay';
-
-        // 글로우 효과
-        const glow = document.createElement('div');
-        glow.className = 'glow-effect';
-
-        element.appendChild(container);
-        element.appendChild(overlay);
-        element.appendChild(glow);
-    });
-}
 
 function mainVisualSlider() {
     var swiper = new Swiper(".main__visualslider", {
@@ -64,83 +28,43 @@ function mainVisualSlider() {
 
 function mainGamesSlider() {
     var swiper = new Swiper(".main__gamesslider", {
-        slidesPerView: 3,
-        spaceBetween: 20,
+        slidesPerView: 5,
+        spaceBetween: 14,
         autoplay:{
             delay: 3000,
         },
         loop:true,
         breakpoints:{
             1024:{
-                slidesPerView:3,
-                spaceBetween: 20,
+                slidesPerView:5,
+                spaceBetween: 14,
             },
             767:{
-                spaceBetween:15,
+                slidesPerView:2,
+                spaceBetween:5,
             },
             320:{
                 slidesPerView:2,
-                spaceBetween:10,
+                spaceBetween:5,
             }
         },
     });
 }
 
-
-function mainLivecasinoSlider() {
-    var swiper = new Swiper(".main__livecasinoslider", {
-        slidesPerView: 6,
-        spaceBetween: 15,
-        navigation: {
-            nextEl: ".main__livecasino .swiper-button-next",
-            prevEl: ".main__livecasino .swiper-button-prev"
-        },
-        autoplay:true,
-        breakpoints:{
-            1024:{
-                slidesPerView:6,
-            },
-            320:{
-                slidesPerView:3,
-                spaceBetween: 10,
-            }
-        },
-        loop:true,
-    });
-}
-
-function mainLiveSlotsSlider() {
-    var swiper = new Swiper(".main__liveslotslider", {
-        slidesPerView: 6,
-        spaceBetween: 15,
-        navigation: {
-            nextEl: ".main__liveslotslider__outer .swiper-button-next",
-            prevEl: ".main__liveslotslider__outer .swiper-button-prev"
-        },
-        autoplay:true,
-        breakpoints:{
-            1024:{
-                slidesPerView:6,
-            },
-            320:{
-                slidesPerView:3,
-                spaceBetween: 10,
-            }
-        },
-        loop:true,
-    });
-}
 function clickNav(){
     const $nav = $('nav').eq(0)
     $('.btn-menu').on('click', function(){
         $nav.toggleClass('active')
+        if( $nav.hasClass('active') ){
+            $('header').addClass('active')
+        }else{
+            $('header').removeClass('active')
+        }
     })
-}
 
-function clickUserinfo(){
-    $('.btn-polygondown').on('click', function(){
-        $('.sideProfile__outer').toggleClass('active')
-        $('.img-polygondown').toggleClass('active')
+    $('.nav-close-btn').on('click', function(){
+        $nav.removeClass('active')
+        $('header').removeClass('active')
     })
 }
 
@@ -269,23 +193,6 @@ function wheelAction(){
     });
 }
 
-function selectFaker(){
-    if( !$('.select__fake').length ) return;
-    $('.select__fake').each(function(){
-        const $this = $(this)
-        const $selected = $this.find('.selected')
-        const $option = $this.find('.option')
-
-        $selected.on('click', function(){
-            $(this).toggleClass('active')
-        })
-        $option.on('click', function(){
-            $selected.empty().append($(this).children().clone())
-            $selected.removeClass('active')
-        })
-    })
-}
-
 function activeBtnCategory() {
     $('.btn-category').on('click', function() {
         $(this).toggleClass('active');
@@ -316,29 +223,6 @@ function activePopupMember(){
 
 }
 
-function mainMsgMore(){
-    const $msg = $('.main__msg')
-    $msg.find('.btn-readmore').on('click', function(){
-        $msg.toggleClass('active')
-        if( $msg.hasClass('active') ){
-            $(this).text('Read less...')
-        }else{
-            $(this).text('Read more...')
-        }
-    })
-}
-
-function wheelanimation(){
-    const title_wonderwheel_each = $('.title_wonderwheel_each')
-    if( !title_wonderwheel_each.length ) return;
-    const title_wonderwheel = $('.title_wonderwheel')
-/* 
-    setTimeout(() => {
-        title_wonderwheel_each.hide()
-        title_wonderwheel.css({opacity:1})
-    },3000) */
-}
-
 function popupBasicOpen(){
     $('.popup__basic').show()
 }
@@ -358,6 +242,12 @@ document.addEventListener('DOMContentLoaded', function() {
         isTextPopupPhase: false,
 
         init() {
+            // 팝업 컨테이너가 존재하는지 확인
+            if (!this.popupContainer) {
+                console.warn('Popup container not found.');
+                return;
+            }
+
             // 초기화 순서 변경
             this.bindEvents();
             this.checkCookieStatus();
@@ -407,6 +297,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         bindEvents() {
             // 이벤트 위임을 사용하여 팝업 컨테이너에 이벤트 리스너 추가
+            if (!this.popupContainer) return
             this.popupContainer.addEventListener('click', (e) => {
                 // 닫기 버튼 클릭 처리
                 if (e.target.closest('.popup-close')) {
@@ -417,7 +308,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         this.handlePopupClose(popup);
                     }
                 }
-                
+
                 // 오늘 하루 닫기 버튼 클릭 처리
                 if (e.target.closest('.btn-todayclose')) {
                     e.preventDefault();
