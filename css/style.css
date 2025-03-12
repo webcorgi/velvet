@@ -2917,8 +2917,16 @@ select {
 .main__gamesslider .swiper-wrapper{
     padding:10px 0;
 }
+.btn-head-mypage-pc{
+    display:block;
+}
+.btn-head-mypage-mobile {
+    display:none;
+}
 
-
+.head-mypage-popup{
+    display:none;
+}
 
 @media screen and (max-width:1600px){
     .payment-section {
@@ -3610,14 +3618,28 @@ select {
     }
 
     .header__right{
+        /* display:none; */
+        position:absolute;
+        right:0;
+        gap:5px;
+    }
+    .header__Loggedin {
+        gap:10px;
+        position:relative;
+    }
+    .deposit-button,
+    .balance-display{
         display:none;
     }
+
     .header__left{
         position:absolute;
         left:10px;
+        top:5px;
     }
     header{
         justify-content: center;
+        flex-wrap:wrap;
     }
     .nav-logo{
         height:30px;
@@ -3904,7 +3926,109 @@ select {
         width:55px;
     }
     
-.main__gamesslider .text-name {
-    display:block;
-}
+    .main__gamesslider .text-name {
+        display:block;
+    }
+    .sub__title.tabInit {
+        display:block;
+        border-bottom:0;
+        padding-bottom:0;
+    }
+    .sub__title.tabInit span {
+        padding-bottom:20px;
+        margin-bottom:20px;
+        border-bottom:1px solid #bababa;
+        width:100%;
+        display:block;
+    }
+    .sub__title.tabInit .tab__mypage button{
+        width:calc(20% - 6px);
+    }
+    .btn-head-mypage-pc{
+        display:none;
+    }
+    .btn-head-mypage-mobile {
+        display:block;
+    }
+    .head-mypage-popup{
+        display:block;
+        position:absolute;
+        top:60px;
+        right:5px;
+        background:#fff;
+        border-radius:5px;
+        padding:10px;
+        box-shadow:0 0 10px 0 #00000033;
+
+    }
+    .head-mypage-popup .deposit-button,
+    .head-mypage-popup .balance-display {
+        display:flex;
+        height:35px;
+    }
+    .head-mypage-popup .deposit-button {
+        width:60px;
+        justify-content:center;
+        align-items:center;
+        padding:8px 5px;
+        font-size:12px;
+        margin-right:0;
+    }
+    .head-mypage-popup .balance-display {
+        width:120px;
+        padding:8px 5px;
+    }
+    .head-mypage-popup .item {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+    .btn-head-popup-mypage {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius:10px;
+        font-size:12px;
+        background:var(--main-gradient);
+        color:#fff;
+        width:100%;
+        margin:10px 0;
+        border:0;
+        height:30px;
+    }
+    .btn-head-popup-logout {
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        border-radius:10px;
+        font-size:12px;
+        border:1px solid red;
+        color:red;
+        width:100%;
+        height:30px;
+        font-weight:700;
+    }
+    .balance-currency,
+    .balance-amount{
+        font-size:12px;
+    }
+    .head-mypage-popup {
+        display:none;
+    }
+    .head-mypage-popup.active {
+        display:block;
+    }
+    header.before__login{
+        height:auto;
+    }
+    header.before__login .header__right {
+        position:relative;
+        padding:10px !important;
+    }
+    header.before__login .header__right input {
+        width:100% !important;
+    }
+    header.before__login .header__right * {
+        font-size:12px !important;
+    }
 }

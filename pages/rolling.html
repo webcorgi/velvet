@@ -132,9 +132,27 @@
                     <button class="deposit-button" onclick="location.href='./deposit.html'">충전신청</button>
                     
                     <!-- Profile Icon -->
-                    <a href="./mypage.html">
+                    <a href="./mypage.html" class="btn-head-mypage-pc">
                         <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
                     </a>
+                    <a href="javascript:;" class="btn-head-mypage-mobile">
+                        <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    </a>
+                    <div class="head-mypage-popup">
+                        <div class="item">
+                            <div class="balance-display">
+                                <span class="balance-amount">100,000</span>
+                                <span class="balance-currency">원</span>
+                            </div>
+                            <button class="deposit-button" onclick="location.href='./deposit.html'">충전신청</button>
+                        </div>
+                        <div class="item">
+                            <button class="btn-head-popup-mypage" onclick="location.href='./mypage.html'">마이페이지</button>
+                        </div>
+                        <div class="item">
+                            <button class="btn-head-popup-logout">로그아웃</button>
+                        </div>
+                    </div>
                 </div>
             </aside>
         </header>

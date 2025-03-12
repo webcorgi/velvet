@@ -11,6 +11,7 @@ $(function () {
     activeBtnCategory()
     activePopupMember()
     amountButton()
+    btnHeadPopupMobile()
 })
 
 function mainVisualSlider() {
@@ -440,4 +441,17 @@ function amountButton(){
             $(this).addClass('active');
         });
     }
+}
+
+function btnHeadPopupMobile(){
+    $('.btn-head-mypage-mobile').on('click', function(event){
+        $('.head-mypage-popup').toggleClass('active');
+        event.stopPropagation(); // Prevent this click from being caught by the document handler
+    });
+
+    $(document).on('click', function(event){
+        if (!$(event.target).closest('.head-mypage-popup').length) {
+            $('.head-mypage-popup').removeClass('active');
+        }
+    });
 }
