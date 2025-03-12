@@ -2906,12 +2906,16 @@ select {
 }
 .main__gamesslider a{
     border-radius:8px;
+    box-shadow: 0px 3.9px 5.19px 0px #00000066;
 }
 .main__gamesslider a:hover {
     box-shadow: 0px 2px 6.7px 2px #00000033;
 }
 .main__gamesslider a:hover .text-name {
     display:block;
+}
+.main__gamesslider .swiper-wrapper{
+    padding:10px 0;
 }
 
 
@@ -3892,4 +3896,15 @@ select {
     .loader img {
         max-width:100%;
     }
+    .wheel-arrow-box{
+        top:20px;
+        left:0;
+    }
+    .wheel-arrow{
+        width:55px;
+    }
+    
+.main__gamesslider .text-name {
+    display:block;
+}
 }
