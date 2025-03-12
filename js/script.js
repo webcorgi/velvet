@@ -10,6 +10,7 @@ $(function () {
     wheelAction()
     activeBtnCategory()
     activePopupMember()
+    amountButton()
 })
 
 function mainVisualSlider() {
@@ -414,4 +415,29 @@ function handleLoader() {
             loaderWrap.style.display = 'none';
         }, 500);
     }, 5000);
+}
+
+
+function amountButton(){
+    // Check if amount buttons exist on the page
+    if ($('.amount-button').length > 0) {
+        // Add click event handler to all amount buttons
+        $('.amount-button').on('click', function() {
+            // Get the data-value attribute from the clicked button
+            const value = $(this).data('value');
+            
+            // If it's the reset button (정정하기) or value is 0
+            if (value === 0) {
+                // Clear the input
+                $('.custom-amount-input').val('');
+            } else {
+                // Set the input value to the button's data-value
+                $('.custom-amount-input').val(value);
+            }
+            
+            // Remove 'active' class from all buttons and add it to the clicked one
+            $('.amount-button').removeClass('active');
+            $(this).addClass('active');
+        });
+    }
 }

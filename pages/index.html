@@ -18,15 +18,15 @@
         <script src="../js/swiper-bundle.min.js"></script>
     </head>
     <body>
-        <div class="loader__wrap">
+        <!-- <div class="loader__wrap">
             <div class="loader">
                 <img src="../img/common/logo.png" alt="logo">
                 <div class="shine"></div>
             </div>
-        </div>
+        </div> -->
 
         <!-- popup -->
-        <div class="popup__container" id="popup1">
+       <!--  <div class="popup__container" id="popup1">
             <div class="popup__image__cont" id="popup_img1" data-popup-id="img1">
                 <button class="popup-close">
                     <img src="../img/common/close.png" alt="closs">
@@ -120,7 +120,7 @@
                 </div>
             </div>
             <div class="bg"></div>
-        </div>
+        </div> -->
         <!-- // popup -->
 
         
@@ -200,7 +200,7 @@
                 </a>
                 <!-- Login/Signup Buttons -->
                 <div class="nav-buttons">
-                    <button class="nav-signup-btn">회원가입</button>
+                    <button class="nav-signup-btn" onclick="location.href='./signin.html'">회원가입</button>
                     <button class="nav-login-btn">로그인</button>
                 </div>
             </div>
@@ -222,7 +222,7 @@
                 <input type="text" placeholder="아이디">
                 <input type="password" placeholder="비밀번호">
                 <a href="javascript:;" class="btn-member login">로그인</a>
-                <a href="javascript:;" class="btn-member signup">회원가입</a>
+                <a href="./signin.html" class="btn-member signup">회원가입</a>
             </aside>
         </header>
 
@@ -253,11 +253,26 @@
                 <div class="main__games">
                     <div class="swiper main__gamesslider">
                         <div class="swiper-wrapper">
-                            <a class="swiper-slide" href="javascript:;"><img src="../img/main/sub_banner1.png" alt="img"></a>
-                            <a class="swiper-slide" href="javascript:;"><img src="../img/main/sub_banner2.png" alt="img"></a>
-                            <a class="swiper-slide" href="javascript:;"><img src="../img/main/sub_banner3.png" alt="img"></a>
-                            <a class="swiper-slide" href="javascript:;"><img src="../img/main/sub_banner4.png" alt="img"></a>
-                            <a class="swiper-slide" href="javascript:;"><img src="../img/main/sub_banner5.png" alt="img"></a>
+                            <a class="swiper-slide" href="javascript:;">
+                                <img src="../img/main/text_live.png" alt="라이브카지노" class="text-name">
+                                <img src="../img/main/sub_banner1.png" alt="img">
+                            </a>
+                            <a class="swiper-slide" href="javascript:;">
+                                <img src="../img/main/text_sports.png" alt="스포츠" class="text-name">
+                                <img src="../img/main/sub_banner2.png" alt="img">
+                            </a>
+                            <a class="swiper-slide" href="javascript:;">
+                                <img src="../img/main/text_slots.png" alt="슬롯" class="text-name">
+                                <img src="../img/main/sub_banner3.png" alt="img">
+                            </a>
+                            <a class="swiper-slide" href="javascript:;">
+                                <img src="../img/main/text_holdem.png" alt="홀덤" class="text-name">
+                                <img src="../img/main/sub_banner4.png" alt="img">
+                            </a>
+                            <a class="swiper-slide" href="javascript:;">
+                                <img src="../img/main/text_minigames.png" alt="미니게임" class="text-name">
+                                <img src="../img/main/sub_banner5.png" alt="img">
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -318,7 +333,7 @@
                     </a>
                 </div>
 
-                <button class="btn-showmore">SHOW MORE</button>
+                <button class="btn-showmore" onclick="location.href='./live-casino.html'">SHOW MORE</button>
 
                 <div class="main__banners">
                     <a href="javascript:;">
@@ -391,7 +406,7 @@
                     </a>
                 </div>
 
-                <button class="btn-showmore">SHOW MORE</button>
+                <button class="btn-showmore" onclick="location.href='./slots.html'">SHOW MORE</button>
 
                 <div class="main-divider"></div>
 
@@ -472,7 +487,7 @@
                 <div class="main__btm__banner">
                     <div class="text">
                         <h2>지금바로 최고의 보너스와 혜택을 받아보세요</h2>
-                        <button class="btn-nowjoin">지금 가입하기</button>
+                        <button class="btn-nowjoin" onclick="location.href='./signin.html'">지금 가입하기</button>
                     </div>
                 </div>
 

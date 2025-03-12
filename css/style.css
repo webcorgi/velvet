@@ -2897,6 +2897,25 @@ select {
     margin-left:13px;
 }
 
+.main__gamesslider .text-name {
+    position:absolute;
+    bottom:0;
+    left:0;
+    width:100%;
+    display:none;
+}
+.main__gamesslider a{
+    border-radius:8px;
+}
+.main__gamesslider a:hover {
+    box-shadow: 0px 2px 6.7px 2px #00000033;
+}
+.main__gamesslider a:hover .text-name {
+    display:block;
+}
+
+
+
 @media screen and (max-width:1600px){
     .payment-section {
         display:block;

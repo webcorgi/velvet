@@ -95,7 +95,7 @@
                 </a>
                 <!-- Login/Signup Buttons -->
                 <div class="nav-buttons">
-                    <button class="nav-signup-btn">회원가입</button>
+                    <button class="nav-signup-btn" onclick="location.href='./signin.html'">회원가입</button>
                     <button class="nav-login-btn">로그인</button>
                 </div>
             </div>
@@ -116,10 +116,10 @@
             <aside class="header__right">
                 <div class="header__Loggedin">
                     <!-- Notification Bell with Counter -->
-                    <div class="notification-wrapper">
+                    <a href="./mypage__messages.html" class="notification-wrapper">
                         <img src="../img/common/notification-bell.png" alt="알림" class="notification-icon">
                         <div class="notification-badge">1</div>
-                    </div>
+                    </a>
                     
                     <!-- Balance Display -->
                     <div class="balance-display">
@@ -128,10 +128,12 @@
                     </div>
                     
                     <!-- Deposit Button -->
-                    <button class="deposit-button">보증금</button>
+                    <button class="deposit-button" onclick="location.href='./deposit.html'">충전신청</button>
                     
                     <!-- Profile Icon -->
-                    <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    <a href="./mypage.html">
+                        <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    </a>
                 </div>
             </aside>
         </header>
@@ -148,9 +150,9 @@
                     <div class="swiper main__visualslider">
                         <div class="swiper-wrapper">
                             <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner1.jpg" alt="img" class="visual-bg"></a>
-                            <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner2.jpg" alt="img" class="visual-bg"></a>
+                            <!-- <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner2.jpg" alt="img" class="visual-bg"></a>
                             <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner3.jpg" alt="img" class="visual-bg"></a>
-                            <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner4.jpg" alt="img" class="visual-bg"></a>
+                            <a href="javascript:;" class="swiper-slide"><img src="../img/main/visual_banner4.jpg" alt="img" class="visual-bg"></a> -->
 
                             <!-- <a href="javascript:;" class="swiper-slide mo"><img src="../img/main/visual_banner1_mo.jpg" alt="img" class="visual-bg"></a>
                             <a href="javascript:;" class="swiper-slide mo"><img src="../img/main/visual_banner2_mo.jpg" alt="img" class="visual-bg"></a>

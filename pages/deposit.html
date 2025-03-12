@@ -95,7 +95,7 @@
                 </a>
                 <!-- Login/Signup Buttons -->
                 <div class="nav-buttons">
-                    <button class="nav-signup-btn">회원가입</button>
+                    <button class="nav-signup-btn" onclick="location.href='./signin.html'">회원가입</button>
                     <button class="nav-login-btn">로그인</button>
                 </div>
             </div>
@@ -116,10 +116,10 @@
             <aside class="header__right">
                 <div class="header__Loggedin">
                     <!-- Notification Bell with Counter -->
-                    <div class="notification-wrapper">
+                    <a href="./mypage__messages.html" class="notification-wrapper">
                         <img src="../img/common/notification-bell.png" alt="알림" class="notification-icon">
                         <div class="notification-badge">1</div>
-                    </div>
+                    </a>
                     
                     <!-- Balance Display -->
                     <div class="balance-display">
@@ -128,10 +128,12 @@
                     </div>
                     
                     <!-- Deposit Button -->
-                    <button class="deposit-button">보증금</button>
+                    <button class="deposit-button" onclick="location.href='./deposit.html'">충전신청</button>
                     
                     <!-- Profile Icon -->
-                    <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    <a href="./mypage.html">
+                        <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    </a>
                 </div>
             </aside>
         </header>
@@ -177,12 +179,12 @@
                                     <input type="text" class="custom-amount-input" placeholder="">
                                 </div>
                                 <div class="amount-buttons">
-                                    <button type="button" class="amount-button">1만원</button>
-                                    <button type="button" class="amount-button">5만원</button>
-                                    <button type="button" class="amount-button">10만원</button>
-                                    <button type="button" class="amount-button">50만원</button>
-                                    <button type="button" class="amount-button">100만원</button>
-                                    <button type="button" class="amount-button">정정하기</button>
+                                    <button type="button" class="amount-button" data-value="10000">1만원</button>
+                                    <button type="button" class="amount-button" data-value="50000">5만원</button>
+                                    <button type="button" class="amount-button" data-value="100000">10만원</button>
+                                    <button type="button" class="amount-button" data-value="500000">50만원</button>
+                                    <button type="button" class="amount-button" data-value="1000000">100만원</button>
+                                    <button type="button" class="amount-button active" data-value="0">정정하기</button>
                                 </div>
                             </div>
                         </div>
@@ -190,7 +192,7 @@
                         <div class="form-row">
                             <div class="form-label">입금자명</div>
                             <div class="form-field">
-                                <input type="text" class="name-input" placeholder="임세*">
+                                <input type="number" class="name-input" placeholder="임세*">
                             </div>
                         </div>
                         

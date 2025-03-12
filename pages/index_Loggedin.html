@@ -194,7 +194,7 @@
                 </a>
                 <!-- Login/Signup Buttons -->
                 <div class="nav-buttons">
-                    <button class="nav-signup-btn">회원가입</button>
+                    <button class="nav-signup-btn" onclick="location.href='./signin.html'">회원가입</button>
                     <button class="nav-login-btn">로그인</button>
                 </div>
             </div>
@@ -215,10 +215,10 @@
             <aside class="header__right">
                 <div class="header__Loggedin">
                     <!-- Notification Bell with Counter -->
-                    <div class="notification-wrapper">
+                    <a href="./mypage__messages.html" class="notification-wrapper">
                         <img src="../img/common/notification-bell.png" alt="알림" class="notification-icon">
                         <div class="notification-badge">1</div>
-                    </div>
+                    </a>
                     
                     <!-- Balance Display -->
                     <div class="balance-display">
@@ -227,10 +227,12 @@
                     </div>
                     
                     <!-- Deposit Button -->
-                    <button class="deposit-button">보증금</button>
+                    <button class="deposit-button" onclick="location.href='./deposit.html'">충전신청</button>
                     
                     <!-- Profile Icon -->
-                    <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    <a href="./mypage.html">
+                        <img src="../img/common/profile-icon.png" alt="프로필" class="profile-icon">
+                    </a>
                 </div>
             </aside>
         </header>
@@ -327,7 +329,7 @@
                     </a>
                 </div>
 
-                <button class="btn-showmore">SHOW MORE</button>
+                <button class="btn-showmore" onclick="location.href='./live-casino.html'">SHOW MORE</button>
 
                 <div class="main__banners">
                     <a href="javascript:;">
@@ -400,7 +402,7 @@
                     </a>
                 </div>
 
-                <button class="btn-showmore">SHOW MORE</button>
+                <button class="btn-showmore" onclick="location.href='./slots.html'">SHOW MORE</button>
 
                 <div class="main-divider"></div>
 
@@ -481,7 +483,7 @@
                 <div class="main__btm__banner">
                     <div class="text">
                         <h2>지금바로 최고의 보너스와 혜택을 받아보세요</h2>
-                        <button class="btn-nowjoin">지금 가입하기</button>
+                        <button class="btn-nowjoin" onclick="location.href='./index.html'">지금 가입하기</button>
                     </div>
                 </div>
 
