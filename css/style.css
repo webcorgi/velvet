@@ -94,6 +94,8 @@ body {
 
 .contents_container {
     width: 100%;
+    max-width:2560px;
+    margin:0 auto;
 }
 header {
     padding:15px 4% 15px 1%;
