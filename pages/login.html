@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <title>VELVET</title>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=Edge"/>
+        <meta name="viewport" content="user-scalable=yes, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <link rel="stylesheet" type="text/css" href="../css/reset.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/common.css"/>
+        <link rel="stylesheet" type="text/css" href="../css/style.css"/>
+
+        <script src="../js/jquery-2.2.4.min.js"></script>
+        <script src="../js/script.js"></script>
+
+        <!-- swiper slide -->
+        <link rel="stylesheet" href="../css/swiper-bundle.min.css" />
+        <script src="../js/swiper-bundle.min.js"></script>
+    </head>
+    <body>
+
+        <!-- 로그인 팝업창 -->
+        <div class="popup__login__wrapper">
+            <div class="popup__login left">
+                <img src="../img/login/popup1.jpg" alt="popup">
+                <div class="bg"></div>
+            </div>
+            <div class="popup__login right">
+                <img src="../img/login/popup2.jpg" alt="popup">
+                <div class="bg"></div>
+            </div>
+        </div><!-- // 로그인 팝업창 -->
+
+        <!-- 회원가입 팝업창 -->
+        <div class="popup__signup">
+            <div class="popup__signup__cont">
+                <div class="popup__signup-top">
+                    <img src="../img/login/logo.png" alt="img">
+                    <a href="javascript:;" class="btn-close">
+                        <img src="../img/login/signup_close.svg" alt="close">
+                    </a>
+                </div>
+                <div class="popup__signup-mid">
+                    <h2>벨벳 회원가입</h2>
+                    <p>회원가입을 하시면 다양한 이벤트와 함께 폭넓은 서비스 이용이 가능하십니다.</p>
+    
+                    <div class="signup__form">
+                        <div class="line">
+                            <span class="line__name">아이디</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="아이디 입력 (6~20자)">
+                                    <button>중복확인</button>
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">사용가능한 아이디입니다.</b>
+                                    <b class="c_red">사용불가능한 아이디입니다.</b>
+                                </div>
+                            </div>
+                            <p>아이디는 4~16자리 입니다.</p>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">비밀번호</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="password" placeholder="비밀번호 입력 (문자, 숫자, 특수문자 포함 6~20자)">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">사용가능한 비밀번호입니다.</b>
+                                    <b class="c_red">사용불가능한 비밀번호입니다.</b>
+                                </div>
+                            </div>
+                            <p>비밀번호는 6~16자리 입니다.</p>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">비밀번호 확인</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="password" placeholder="비밀번호 재입력">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">비밀번호가 일치합니다.</b>
+                                    <b class="c_red">비밀번호가 일치하지 않습니다.</b>
+                                </div>
+                            </div>
+                            <p>비밀번호는 6~16자리 입니다.</p>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">닉네임</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="닉네임을 입력해주세요">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">사용가능한 닉네임입니다.</b>
+                                    <b class="c_red">사용불가능한 닉네임입니다.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">이름</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="이름을 입력해주세요">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_red">이름을 입력해주세요.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">생년월일</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top birth-inputs">
+                                    <select>
+                                        <option>1950</option>
+                                    </select>
+                                    <select>
+                                        <option>12</option>
+                                    </select>
+                                    <select>
+                                        <option>30</option>
+                                    </select>
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_red">생년월일을 선택해주세요.</b>
+                                </div>
+                            </div>
+                            <p style="top:0;">이벤트 참여를 위해 정확한 생년월일을 작성해주세요</p>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">계좌번호</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="계좌번호 입력">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_red">계좌번호를 입력해주세요.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">은행명</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <select>
+                                        <option>은행선택</option>
+                                        <option>국민은행</option>
+                                        <option>신협</option>
+                                        <option>경남은행</option>
+                                        <option>기업은행</option>
+                                        <option>농협은행</option>
+                                        <option>대구은행</option>
+                                        <option>도이치은행</option>
+                                        <option>부산은행</option>
+                                        <option>상호저축은행</option>
+                                        <option>새마을금고</option>
+                                        <option>수협은행</option>
+                                        <option>신한은행</option>
+                                        <option>산업은행</option>
+                                        <option>외환은행</option>
+                                        <option>우리은행</option>
+                                        <option>우체국</option>
+                                        <option>전북은행</option>
+                                        <option>제주은행</option>
+                                        <option>하나은행</option>
+                                        <option>한국씨티은행</option>
+                                        <option>HSBC은행</option>
+                                        <option>SC제일은행</option>
+                                        <option>산림조합</option>
+                                        <option>카카오뱅크</option>
+                                        <option>케이뱅크</option>
+                                        <option>SBI저축은행</option>
+                                        <option>테스트</option>
+                                        <option>광주은행</option>
+                                    </select>
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_red">은행을 선택해주세요.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">환전 비밀번호</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="password" placeholder="환전 비밀번호 입력">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">사용가능한 비밀번호입니다.</b>
+                                    <b class="c_red">4~6자리 숫자만 입력해주세요.</b>
+                                </div>
+                            </div>
+                            <p>환전 비밀번호는 4~6자리 입니다.</p>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">전화번호</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="휴대폰 번호 입력 ('-' 제외 11자리 입력)">
+                                    <button>인증번호 받기</button>
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_red">휴대폰 번호를 입력해주세요.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">인증번호</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="인증번호 입력">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">인증이 완료되었습니다.</b>
+                                    <b class="c_red">인증번호가 일치하지 않습니다.</b>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="line">
+                            <span class="line__name">추천인</span>
+                            <div class="line__cont">
+                                <div class="line__cont-top">
+                                    <input type="text" placeholder="추천인이 없을경우에는 미입력">
+                                </div>
+                                <div class="line__cont-btm">
+                                    <b class="c_green">추천인이 확인되었습니다.</b>
+                                    <b class="c_red">존재하지 않는 추천인입니다.</b>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="btn-btm-signup">회원가입 신청</button>
+                </div>
+            </div>
+            <div class="popup__signup__bg"></div>
+        </div><!-- // 회원가입 팝업창 -->
+
+        <!-- 회원가입완료 팝업창 -->
+        <div class="popup__signupend">
+            <div class="popup__signupend__cont">
+                <div class="popup__signupend-top">
+                    <img src="../img/login/logo.png" alt="img">
+                    <a href="javascript:;" class="btn-close">
+                        <img src="../img/login/signup_close.svg" alt="close">
+                    </a>
+                </div>
+                <div class="popup__signupend-mid">
+                    <h2>회원가입이 완료되었습니다.<br>잠시 후 접속해주시기 바랍니다.</h2>
+                </div>
+            </div>
+            <div class="popup__signupend__bg"></div>
+        </div><!-- // 회원가입완료 팝업창 -->
+
+
+        <div class="page__login">
+            <div class="login__top__msg__wrap">
+                <div class="login__top__msg">
+                    <img src="../img/login/mark-top.svg" alt="icon">
+                    <b>아이디 또는 비밀번호를 확인해주시기 바랍니다</b>
+                </div>
+            </div>
+            <div class="login__container">
+                <img src="../img/login/logo.png" alt="velvet">
+                <input type="text" class="login__input id" placeholder="아이디">
+                <input type="password" class="login__input pw" placeholder="비밀번호">
+                <a href="javascript:;" class="btn-login">로그인</a>
+                <a href="javascript:;" class="btn-signup">회원가입</a>
+            </div>
+        </div>
+    </body>
+</html>

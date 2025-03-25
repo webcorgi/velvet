@@ -12,6 +12,9 @@ $(function () {
     activePopupMember()
     amountButton()
     btnHeadPopupMobile()
+    loginPopupClose()
+    loginPopupForSignup()
+    loginPopupForSignupEnd()
 })
 
 function mainVisualSlider() {
@@ -405,6 +408,8 @@ document.addEventListener('DOMContentLoaded', function() {
 function handleLoader() {
     // 로딩 요소를 찾습니다
     const loaderWrap = document.querySelector('.loader__wrap');
+
+    if(!loaderWrap) return;
     
     // 3초(3000ms) 후에 로딩 화면을 사라지게 합니다
     setTimeout(function() {
@@ -454,4 +459,35 @@ function btnHeadPopupMobile(){
             $('.head-mypage-popup').removeClass('active');
         }
     });
+}
+
+
+function loginPopupClose(){
+    if( !$('.popup__login').length ) return;
+    $('.popup__login').each(function(){
+        $(this).find('img, .bg').on('click', function(){
+            $(this).closest('.popup__login').hide()
+        })
+    })
+}
+
+function loginPopupForSignup(){
+    $('.popup__signup').find('.btn-close, .popup__signup__bg').on('click', function(){
+        $('.popup__signup').hide()
+    })
+
+    $('.btn-signup').on('click', function(){
+        $('.popup__signup').css({display:'flex'})
+    });
+
+    $('.btn-btm-signup').on('click', function(){
+        $('.popup__signup').css({display:'none'})
+        $('.popup__signupend').css({display:'flex'})
+    });
+}
+
+function loginPopupForSignupEnd(){
+    $('.popup__signupend').find('.btn-close, .popup__signupend__bg').on('click', function(){
+        $('.popup__signupend').hide()
+    })
 }
