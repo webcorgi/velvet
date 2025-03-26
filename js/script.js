@@ -504,8 +504,8 @@ function positionLoginPopups() {
 
     if( $(window).width() > 991 ){
         const containerLeft = $('.login__container').offset().left;
-        $('.popup__login.left').css({left:containerLeft+564})
-        $('.popup__login.right').css({right:containerLeft+564})
+        $('.popup__login.left').css({left:containerLeft+564+40})
+        $('.popup__login.right').css({right:containerLeft+564+40})
     }else{
         const containerLeft = $('.login__container').offset().left;
         $('.popup__login.left').css({left:0})
