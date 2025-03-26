@@ -3163,7 +3163,7 @@ select {
     height:26px;
     background:#fff;
     border-radius:4px;
-    font-size:10px;
+    font-size:12px;
 }
 .popup__signup .line__cont-top input::placeholder {
     color:#BDBDBD;
@@ -3183,10 +3183,10 @@ select {
     height:26px;
 }
 .popup__signup .line>p {
-    font-size:8px;
+    font-size:10px;
     color:#666;
     position:relative;
-    top:8px;
+    top:0;
 }
 
 .popup__signup .line__cont-top.birth-inputs {}
@@ -3199,7 +3199,7 @@ select {
 }
 
 .popup__signup .line__cont-btm b {
-    font-size:8px;
+    font-size:10px;
     font-weight:bold;
 }
 
