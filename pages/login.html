@@ -21,13 +21,15 @@
 
         <!-- 로그인 팝업창 -->
         <div class="popup__login__wrapper">
-            <div class="popup__login left">
-                <img src="../img/login/popup1.jpg" alt="popup">
-                <div class="bg"></div>
-            </div>
-            <div class="popup__login right">
-                <img src="../img/login/popup2.jpg" alt="popup">
-                <div class="bg"></div>
+            <div class="inner">
+                <div class="popup__login left">
+                    <img src="../img/login/popup1.jpg" alt="popup">
+                    <div class="bg"></div>
+                </div>
+                <div class="popup__login right">
+                    <img src="../img/login/popup2.jpg" alt="popup">
+                    <div class="bg"></div>
+                </div>
             </div>
         </div><!-- // 로그인 팝업창 -->
 
@@ -57,7 +59,6 @@
                                     <b class="c_red">사용불가능한 아이디입니다.</b>
                                 </div>
                             </div>
-                            <p>아이디는 4~16자리 입니다.</p>
                         </div>
                         <div class="line">
                             <span class="line__name">비밀번호</span>
@@ -70,7 +71,6 @@
                                     <b class="c_red">사용불가능한 비밀번호입니다.</b>
                                 </div>
                             </div>
-                            <p>비밀번호는 6~16자리 입니다.</p>
                         </div>
                         <div class="line">
                             <span class="line__name">비밀번호 확인</span>
@@ -83,7 +83,6 @@
                                     <b class="c_red">비밀번호가 일치하지 않습니다.</b>
                                 </div>
                             </div>
-                            <p>비밀번호는 6~16자리 입니다.</p>
                         </div>
                         <div class="line">
                             <span class="line__name">닉네임</span>
@@ -126,7 +125,6 @@
                                     <b class="c_red">생년월일을 선택해주세요.</b>
                                 </div>
                             </div>
-                            <p style="top:0;">이벤트 참여를 위해 정확한 생년월일을 작성해주세요</p>
                         </div>
                         <div class="line">
                             <span class="line__name">계좌번호</span>
@@ -191,7 +189,6 @@
                                     <b class="c_red">4~6자리 숫자만 입력해주세요.</b>
                                 </div>
                             </div>
-                            <p>환전 비밀번호는 4~6자리 입니다.</p>
                         </div>
                         <div class="line">
                             <span class="line__name">전화번호</span>
@@ -254,18 +251,20 @@
 
 
         <div class="page__login">
-            <div class="login__top__msg__wrap">
-                <div class="login__top__msg">
-                    <img src="../img/login/mark-top.svg" alt="icon">
-                    <b>아이디 또는 비밀번호를 확인해주시기 바랍니다</b>
+            <div class="page__login__wrap">
+                <div class="login__top__msg__wrap">
+                    <div class="login__top__msg">
+                        <img src="../img/login/mark-top.svg" alt="icon">
+                        <b>아이디 또는 비밀번호를 확인해주시기 바랍니다</b>
+                    </div>
                 </div>
-            </div>
-            <div class="login__container">
-                <img src="../img/login/logo.png" alt="velvet">
-                <input type="text" class="login__input id" placeholder="아이디">
-                <input type="password" class="login__input pw" placeholder="비밀번호">
-                <a href="javascript:;" class="btn-login">로그인</a>
-                <a href="javascript:;" class="btn-signup">회원가입</a>
+                <div class="login__container">
+                    <img src="../img/login/logo.png" alt="velvet">
+                    <input type="text" class="login__input id" placeholder="아이디">
+                    <input type="password" class="login__input pw" placeholder="비밀번호">
+                    <a href="javascript:;" class="btn-login">로그인</a>
+                    <a href="javascript:;" class="btn-signup">회원가입</a>
+                </div>
             </div>
         </div>
     </body>

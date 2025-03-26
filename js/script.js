@@ -15,6 +15,11 @@ $(function () {
     loginPopupClose()
     loginPopupForSignup()
     loginPopupForSignupEnd()
+
+    positionLoginPopups()
+    $(window).resize(function() {
+        positionLoginPopups();
+    });
 })
 
 function mainVisualSlider() {
@@ -490,4 +495,21 @@ function loginPopupForSignupEnd(){
     $('.popup__signupend').find('.btn-close, .popup__signupend__bg').on('click', function(){
         $('.popup__signupend').hide()
     })
+}
+
+
+
+function positionLoginPopups() {
+    if( !$('.login__container').length ) return;
+
+    if( $(window).width() > 991 ){
+        const containerLeft = $('.login__container').offset().left;
+        $('.popup__login.left').css({left:containerLeft+564})
+        $('.popup__login.right').css({right:containerLeft+564})
+    }else{
+        const containerLeft = $('.login__container').offset().left;
+        $('.popup__login.left').css({left:0})
+        $('.popup__login.right').css({right:0})
+    }
+
 }
